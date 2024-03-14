@@ -19,4 +19,7 @@ get_scene_STdata.m | Pulls +/- 2 min of data for every PlanetScope scene time | 
 ## Usage
 
 1. Pull repo
+2. Create new python environment using provided environment.yml file.
+
+`conda env create -f environment.yml`
 

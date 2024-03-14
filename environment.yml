@@ -1,0 +1,10 @@
+name: boat-detection
+dependencies:
+  - python = 3.12
+  - numpy
+  - pandas
+  - geopandas
+  - seaborn
+  - shapely
+  - matplotlib
+  - rasterio
