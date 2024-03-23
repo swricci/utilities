@@ -7,12 +7,14 @@ one-offs
 
 ## DeSCRIPTions
 
-Following are the `MATLAB`  scrips used for various purposes.
+Following are the `MATLAB` and `python` scrips used for various purposes.
 
 Script Name | Description | Inputs | Outputs
 -----|-----|-----|-----|
 getST500_Keys.m | Pulls acoustic data from all NOAA deployments. | site, start time, duration, data directory | y, t, fs
 get_scene_STdata.m | Pulls +/- 2 min of data for every PlanetScope scene time | list of scene times, data directory | mat file of y, t for every scene time
+find_boat_ranges.ipynb | Data cleaning of verified detections, determines distance to NOAA hydrophone from each detection (site = WDR) | NOAA acoustic vessel detections, planet detections | none
+**
 
 
 
@@ -23,3 +25,5 @@ get_scene_STdata.m | Pulls +/- 2 min of data for every PlanetScope scene time | 
 
 `conda env create -f environment.yml`
 
+3. Establish connection to the data computer (newmadrid).
+4. Update any paths 
