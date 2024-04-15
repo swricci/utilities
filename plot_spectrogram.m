@@ -1,4 +1,4 @@
-function [y,t,fs] = plot_spectrogram(site, sceneTime, time_win, rtdir)
+function [y,t,fs] = plot_spectrogram(site, sceneTime, time_win, rtdir, plt)
     % Plot sound imagery for a given site and time window
         % site: site name
         % sceneTime: time of the scene
@@ -7,6 +7,11 @@ function [y,t,fs] = plot_spectrogram(site, sceneTime, time_win, rtdir)
         
     % Dependencies
         % getST500_Keys.m
+
+    % turn plot on and off
+    if nargin < 5
+        plt = 1;
+    end
 
 
     % Get start time and duration of data to pull
@@ -20,11 +25,13 @@ function [y,t,fs] = plot_spectrogram(site, sceneTime, time_win, rtdir)
 
     [~,F,T,Pxx]=spectrogram(y,2^12,2^11,[],fs); %0.05sec windows, 0% overlap
 
-    figure;
-    imagesc(T,F,10*log10(Pxx)); axis xy; xlabel('Time (sec)'); 
-    caxis([40,90]);  
-    ylim([0 5000]);
-    ylabel('Frequency (kHz)'); title(datestr(sceneTime));
+    if plt == 1;
+        figure;
+        imagesc(T,F,10*log10(Pxx)); axis xy; xlabel('Time (sec)'); 
+        caxis([40,90]);  
+        ylim([0 5000]);
+        ylabel('Frequency (kHz)'); title(datestr(sceneTime));
+    end
 
 
 
