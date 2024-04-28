@@ -36,8 +36,3 @@ end
 
 % writetable(finalTable, '/Users/swbrown/Desktop/remote_data/d_sbrown/FKNMS/data/rms_bands.csv');
 
-% Read in detection info
-detections = readtable('/Users/swbrown/Desktop/remote_data/d_sbrown/FKNMS/output/wdr_detection_info.csv');
-
-% read in merge scene list
-merged_sceneTimes = readtable('/Users/swbrown/Desktop/remote_data/d_sbrown/FKNMS/data/.csv');
