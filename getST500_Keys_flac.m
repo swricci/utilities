@@ -92,11 +92,11 @@ elseif S2==1
       %tt=FK02_tt; % generric time table (tt) name to simply coding later 
       slabel='ESB'; 
 elseif S3==1 
-      load(fullfile(rtdir,'FKNMS_tt/FK03_tt.mat'),'FK03_tt');  % table of start times for WDR  
+      load(fullfile(rtdir,'FKNMS_tt/FK03_tt.mat'),'tt');  % table of start times for WDR  
       %tt=FK03_tt; % generric time table (tt) name to simply coding later 
        slabel='NFS'; 
 elseif S4==1 
-      load(fullfile(rtdir,'FKNMS_tt/FK04_tt.mat'),'FK04_tt'); 
+      load(fullfile(rtdir,'FKNMS_tt/FK04_tt.mat'),'tt'); 
       %tt=FK04_tt; % generric time table (tt) name to simply coding later 
       slabel='SBR'; 
 else 
