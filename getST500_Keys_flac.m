@@ -194,7 +194,6 @@ end
 
 end
 
-
 function cal=getcal(sn)
       if sn==671359016
           gain=177.1-1.8;  cal=10.^(gain/20);  
@@ -207,7 +206,9 @@ function cal=getcal(sn)
       elseif sn==5441
           gain=177.2-1.8;  cal=10.^(gain/20);  
       elseif  sn==5424
-          gain=177.1-1.8;  cal=10.^(gain/20); 
+          gain=177.1-1.8;  cal=10.^(gain/20);
+      elseif  sn==671399976
+          gain=179.1-1.8;  cal=10.^(gain/20);
       else
           disp('cannot determine gain')
       end
